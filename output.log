@@ -1,0 +1,198 @@
+[2022-10-04 10:07:10.725][TRACE[0m][g_test/main.go::func1(36)]| map[content:hello world time:2022-10-04 10:07:10.725][0m
+[2022-10-04 10:07:10.726][[97m[42mDEBUG[0m][g_test/main.go::func1(37)]| map[content:hello world time:2022-10-04 10:07:10.725][0m
+[2022-10-04 10:07:10.726][[97m[46mINFO[0m][g_test/main.go::func1(38)]| map[content:hello world time:2022-10-04 10:07:10.725][0m
+[2022-10-04 10:07:10.726][[97m[45mWARN[0m][g_test/main.go::func1(39)]| map[content:hello world time:2022-10-04 10:07:10.725][0m
+[2022-10-04 10:07:10.726][[97m[43mERROR[0m][g_test/main.go::func1(40)]| [1m[33m[100mmap[content:hello world time:2022-10-04 10:07:10.725][0m
+[2022-10-04 10:07:10.726][[97m[41mFATAL[0m][g_test/main.go::func1(41)]| [1m[4m[31m[47mmap[content:hello world time:2022-10-04 10:07:10.725][0m
+::: Terminating... :::
+caught signal :  interrupt
+			Wait for 5 second to finish processing
+2022/10/04 10:49:28 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 10:49:28 			Wait for 5 second to finish processing
+[2022-10-04 10:53:05.243][TRACE[0m][g_test/main.go::func2(52)]| map[content:hello world time:2022-10-04 10:53:05.243][0m
+[2022-10-04 10:53:05.243][[97m[42mDEBUG[0m][g_test/main.go::func2(53)]| map[content:hello world time:2022-10-04 10:53:05.243][0m
+[2022-10-04 10:53:05.243][[97m[46mINFO[0m][g_test/main.go::func2(54)]| map[content:hello world time:2022-10-04 10:53:05.243][0m
+[2022-10-04 10:53:05.243][[97m[45mWARN[0m][g_test/main.go::func2(55)]| map[content:hello world time:2022-10-04 10:53:05.243][0m
+[2022-10-04 10:53:05.243][[97m[43mERROR[0m][g_test/main.go::func2(56)]| [1m[33m[100mmap[content:hello world time:2022-10-04 10:53:05.243][0m
+[2022-10-04 10:53:05.243][[97m[41mFATAL[0m][g_test/main.go::func2(57)]| [1m[4m[31m[47mmap[content:hello world time:2022-10-04 10:53:05.243][0m
+::: Terminating... :::
+caught signal :  interrupt
+			Wait for 5 second to finish processing
+[2022-10-04 10:56:12.829][TRACE[0m][g_test/main.go::func2(51)]| map[content:hello world time:2022-10-04 10:56:12.829][0m
+[2022-10-04 10:56:12.829][[97m[42mDEBUG[0m][g_test/main.go::func2(52)]| map[content:hello world time:2022-10-04 10:56:12.829][0m
+[2022-10-04 10:56:12.829][[97m[46mINFO[0m][g_test/main.go::func2(53)]| map[content:hello world time:2022-10-04 10:56:12.829][0m
+[2022-10-04 10:56:12.829][[97m[45mWARN[0m][g_test/main.go::func2(54)]| map[content:hello world time:2022-10-04 10:56:12.829][0m
+[2022-10-04 10:56:12.829][[97m[43mERROR[0m][g_test/main.go::func2(55)]| [1m[33m[100mmap[content:hello world time:2022-10-04 10:56:12.829][0m
+[2022-10-04 10:56:12.829][[97m[41mFATAL[0m][g_test/main.go::func2(56)]| [1m[4m[31m[47mmap[content:hello world time:2022-10-04 10:56:12.829][0m
+[2022-10-04 10:56:20.848][TRACE[0m][g_test/main.go::func2(51)]| map[content:hello world time:2022-10-04 10:56:20.848][0m
+[2022-10-04 10:56:20.848][[97m[42mDEBUG[0m][g_test/main.go::func2(52)]| map[content:hello world time:2022-10-04 10:56:20.848][0m
+[2022-10-04 10:56:20.848][[97m[46mINFO[0m][g_test/main.go::func2(53)]| map[content:hello world time:2022-10-04 10:56:20.848][0m
+[2022-10-04 10:56:20.848][[97m[45mWARN[0m][g_test/main.go::func2(54)]| map[content:hello world time:2022-10-04 10:56:20.848][0m
+[2022-10-04 10:56:20.848][[97m[43mERROR[0m][g_test/main.go::func2(55)]| [1m[33m[100mmap[content:hello world time:2022-10-04 10:56:20.848][0m
+[2022-10-04 10:56:20.848][[97m[41mFATAL[0m][g_test/main.go::func2(56)]| [1m[4m[31m[47mmap[content:hello world time:2022-10-04 10:56:20.848][0m
+[2022-10-04 10:56:29.667][TRACE[0m][g_test/main.go::func2(51)]| map[content:hello world time:2022-10-04 10:56:29.667][0m
+[2022-10-04 10:56:29.667][[97m[42mDEBUG[0m][g_test/main.go::func2(52)]| map[content:hello world time:2022-10-04 10:56:29.667][0m
+[2022-10-04 10:56:29.667][[97m[46mINFO[0m][g_test/main.go::func2(53)]| map[content:hello world time:2022-10-04 10:56:29.667][0m
+[2022-10-04 10:56:29.667][[97m[45mWARN[0m][g_test/main.go::func2(54)]| map[content:hello world time:2022-10-04 10:56:29.667][0m
+[2022-10-04 10:56:29.667][[97m[43mERROR[0m][g_test/main.go::func2(55)]| [1m[33m[100mmap[content:hello world time:2022-10-04 10:56:29.667][0m
+[2022-10-04 10:56:29.667][[97m[41mFATAL[0m][g_test/main.go::func2(56)]| [1m[4m[31m[47mmap[content:hello world time:2022-10-04 10:56:29.667][0m
+::: Terminating... :::
+caught signal :  interrupt
+			Wait for 5 second to finish processing
+2022/10/04 11:04:26 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:04:26 			Wait for 5 second to finish processing
+[2022-10-04 11:04:30.268][TRACE[0m][g_test/main.go::func1(38)]| map[content:hello world time:2022-10-04 11:04:30.268][0m
+[2022-10-04 11:04:30.268][[97m[42mDEBUG[0m][g_test/main.go::func1(39)]| map[content:hello world time:2022-10-04 11:04:30.268][0m
+[2022-10-04 11:04:30.268][[97m[46mINFO[0m][g_test/main.go::func1(40)]| map[content:hello world time:2022-10-04 11:04:30.268][0m
+[2022-10-04 11:04:30.268][[97m[45mWARN[0m][g_test/main.go::func1(41)]| map[content:hello world time:2022-10-04 11:04:30.268][0m
+[2022-10-04 11:04:30.268][[97m[43mERROR[0m][g_test/main.go::func1(42)]| [1m[33m[100mmap[content:hello world time:2022-10-04 11:04:30.268][0m
+[2022-10-04 11:04:30.268][[97m[41mFATAL[0m][g_test/main.go::func1(43)]| [1m[4m[31m[47mmap[content:hello world time:2022-10-04 11:04:30.268][0m
+[2022-10-04 11:04:44.587][TRACE[0m][g_test/main.go::func1(38)]| map[content:hello world time:2022-10-04 11:04:44.587][0m
+[2022-10-04 11:04:44.587][[97m[42mDEBUG[0m][g_test/main.go::func1(39)]| map[content:hello world time:2022-10-04 11:04:44.587][0m
+[2022-10-04 11:04:44.587][[97m[46mINFO[0m][g_test/main.go::func1(40)]| map[content:hello world time:2022-10-04 11:04:44.587][0m
+[2022-10-04 11:04:44.587][[97m[45mWARN[0m][g_test/main.go::func1(41)]| map[content:hello world time:2022-10-04 11:04:44.587][0m
+[2022-10-04 11:04:44.587][[97m[43mERROR[0m][g_test/main.go::func1(42)]| [1m[33m[100mmap[content:hello world time:2022-10-04 11:04:44.587][0m
+[2022-10-04 11:04:44.587][[97m[41mFATAL[0m][g_test/main.go::func1(43)]| [1m[4m[31m[47mmap[content:hello world time:2022-10-04 11:04:44.587][0m
+::: Terminating... :::
+caught signal :  interrupt
+			Wait for 5 second to finish processing
+[2022-10-04 11:04:59.981][[97m[43mERROR[0m][g_test/main.go::func1(42)]| [1m[33m[100mmap[content:hello world time:2022-10-04 11:04:59.981][0m
+::: Terminating... :::
+caught signal :  interrupt
+			Wait for 5 second to finish processing
+[2022-10-04 11:09:08.682][[97m[43mERROR[0m][g_test/main.go::func1(42)]| [1m[33m[100mmap[content:hello world time:2022-10-04 11:09:08.682][0m
+::: Terminating... :::
+caught signal :  interrupt
+			Wait for 5 second to finish processing
+[2022-10-04 11:11:41.924][[97m[43mERROR[0m][g_test/main.go::func1(42)]| [1m[33m[100mmap[content:hello world time:2022-10-04 11:11:41.924][0m
+::: Terminating... :::
+caught signal :  interrupt
+			Wait for 5 second to finish processing
+2022/10/04 11:13:00 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:13:00 			Wait for 5 second to finish processing
+2022/10/04 11:13:14 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:13:14 			Wait for 5 second to finish processing
+2022/10/04 11:14:38 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:14:38 			Wait for 5 second to finish processing
+2022/10/04 11:16:18 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:16:18 			Wait for 5 second to finish processing
+2022/10/04 11:16:29 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:16:29 			Wait for 5 second to finish processing
+2022/10/04 11:16:52 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:16:52 			Wait for 5 second to finish processing
+2022/10/04 11:17:10 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:17:10 			Wait for 5 second to finish processing
+2022/10/04 11:17:28 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:17:28 			Wait for 5 second to finish processing
+2022/10/04 11:17:37 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:17:37 			Wait for 5 second to finish processing
+2022/10/04 11:18:05 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:18:05 			Wait for 5 second to finish processing
+2022/10/04 11:18:18 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:18:18 			Wait for 5 second to finish processing
+2022/10/04 11:18:31 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:18:31 			Wait for 5 second to finish processing
+2022/10/04 11:19:25 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:19:25 			Wait for 5 second to finish processing
+2022/10/04 11:25:46 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:25:46 			Wait for 5 second to finish processing
+2022/10/04 11:27:59 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:27:59 			Wait for 5 second to finish processing
+2022/10/04 11:36:24 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:36:24 			Wait for 5 second to finish processing
+2022/10/04 11:49:26 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:49:26 			Wait for 5 second to finish processing
+2022/10/04 11:49:44 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:49:44 			Wait for 5 second to finish processing
+2022/10/04 11:58:08 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:58:08 			Wait for 5 second to finish processing
+2022/10/04 11:58:19 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 11:58:19 			Wait for 5 second to finish processing
+2022/10/04 12:28:42 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 12:28:42 			Wait for 5 second to finish processing
+2022/10/04 12:29:10 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 12:29:10 			Wait for 5 second to finish processing
+2022/10/04 12:30:30 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 12:30:30 			Wait for 5 second to finish processing
+2022/10/04 12:31:31 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 12:31:31 			Wait for 5 second to finish processing
+2022/10/04 12:39:45 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 12:39:45 			Wait for 5 second to finish processing
+2022/10/04 12:40:05 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 12:40:05 			Wait for 5 second to finish processing
+2022/10/04 12:40:35 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 12:40:35 			Wait for 5 second to finish processing
+2022/10/04 14:04:27 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 14:04:27 			Wait for 5 second to finish processing
+2022/10/04 14:05:08 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 14:05:08 			Wait for 5 second to finish processing
+2022/10/04 14:06:09 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 14:06:09 			Wait for 5 second to finish processing
+2022/10/04 14:06:22 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 14:06:22 			Wait for 5 second to finish processing
+2022/10/04 14:06:33 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 14:06:33 			Wait for 5 second to finish processing
+2022/10/04 14:06:58 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 14:06:58 			Wait for 5 second to finish processing
+2022/10/04 14:14:04 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 14:14:04 			Wait for 5 second to finish processing
+2022/10/04 14:17:44 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 14:17:44 			Wait for 5 second to finish processing
+2022/10/04 14:18:15 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 14:18:15 			Wait for 5 second to finish processing
+2022/10/04 14:21:50 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 14:21:50 			Wait for 5 second to finish processing
+2022/10/04 14:22:58 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 14:22:58 			Wait for 5 second to finish processing
+2022/10/04 14:23:09 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 14:23:09 			Wait for 5 second to finish processing
+2022/10/04 14:38:43 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 14:38:43 			Wait for 5 second to finish processing
+2022/10/04 14:43:49 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 14:43:49 			Wait for 5 second to finish processing
+2022/10/04 16:09:24 ::: Terminating... :::
+caught signal :  interrupt
+2022/10/04 16:09:24 			Wait for 5 second to finish processing
