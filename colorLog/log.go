@@ -5,8 +5,8 @@ import (
 	"io"
 	"log"
 	"log_test/colorPreset"
+	"log_test/email"
 	"os"
-	"os/exec"
 	"os/signal"
 	"runtime"
 	"strings"
@@ -32,7 +32,7 @@ var levels = [...]string{
 	"FATAL",
 }
 
-var logger = newLogger(TRACE, true, true)
+var logger = newLogger(TRACE, true, true, true)
 
 type Logger struct {
 	LogLevel int
@@ -51,10 +51,18 @@ func SetLogLevel(level int) {
 }
 
 // Options to save conditions according to level, save log to local, send logfile to remote
-func newLogger(level int, saveLog bool, postLog bool) *Logger {
-	catchShutdown( /*postingLogData*/ func() {
-		fmt.Printf("before close method call\n")
-	})
+func newLogger(level int, saveLog bool, postLog bool, mailingService bool) *Logger {
+	catchShutdown(
+		func(mailingService bool) func() {
+			if mailingService {
+				return postingLogData
+			} else {
+				return func() {
+					fmt.Printf("no mailing service \n")
+				}
+			}
+		}(mailingService),
+	)
 	return &Logger{
 		LogLevel: level,
 		SaveLog:  saveLog,
@@ -98,32 +106,25 @@ func catchShutdown(gracefulShutdownFunc ...func()) {
 		for i := 0; i < len(gracefulShutdownFunc); i++ {
 			gracefulShutdownFunc[i]()
 		}
-
-		log.Println("			Wait for 5 second to finish processing")
-		time.Sleep(1 * time.Second)
 		os.Exit(0)
 	}()
 }
 
 func postingLogData() {
-	log.Println("exit process - 2")
-	// log.Println("hello i am post binary data(ex logfiles..)\n")
-	// time.Sleep(time.Second * 2)
-	// go cmd email
-	// cmd echo "This is body msg" > body.txt | mpack -s "This is subject" -d $(pwd)/body.txt $(pwd)/output.log recipient "MAIL_ADDRESS"
-	var bodyMsg, subject, recipient string
-
-	bodyMsg = "this is dummy body\n\t" + fmt.Sprintf("%v", time.Now().UnixMilli()) + "\n\n\n"
-	subject = "[" + time.Now().Format("2006-01-02 15:04:05.000") + "] this is dummy subject"
-	recipient = "MAIL_ADDRESS"
-
-	cmdline := fmt.Sprintf(`echo "%v" > body.txt | mpack -s "%v" -d $(pwd)/body.txt $(pwd)/output.log recipient %v`, bodyMsg, subject, recipient)
-	cmd := exec.Command("sh", "-c", cmdline)
-	log.Printf("	 command %v", cmdline)
-	if err := cmd.Run(); err != nil {
-		log.Panicf("cmd panic %v", err)
+	log.Println("exit process - in mail service")
+	var bodyMsg, subject, sender, receiver string
+	attachment, _ := os.Getwd()
+	attachment += "/output.log"
+	if _, err := os.Stat(attachment); os.IsNotExist(err) {
+		fmt.Printf("logfile is not generated.. ")
 		return
 	}
+	subject = "[System App Crashed] please check out attached log file."
+	bodyMsg = "<div> [" + time.Now().Format("2006-01-02 15:04:05.000") + "]</div> <strong>check attached file..</strong>"
+	sender, receiver = "this_is_sender_email_address", "this_is_receiver_email_address"
+
+	email.InitMsg(subject, bodyMsg, attachment)
+	email.SendMail(sender, receiver, email.EMAIL_TOKEN)
 }
 
 // returns specific location info that log declared.

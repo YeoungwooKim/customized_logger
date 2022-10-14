@@ -1,0 +1,7 @@
+[2022-10-14 12:32:00.175][[97m[46mINFO[0m][r_test/main.go::func1(27)]| map[content:hello world time:2022-10-14 12:32:00.174][0m
+[2022-10-14 12:32:00.175][[97m[45mWARN[0m][r_test/main.go::func1(28)]| map[content:hello world time:2022-10-14 12:32:00.174][0m
+[2022-10-14 12:32:00.175][[97m[43mERROR[0m][r_test/main.go::func1(29)]| [1m[33m[100mmap[content:hello world time:2022-10-14 12:32:00.174][0m
+[2022-10-14 12:32:00.175][[97m[41mFATAL[0m][r_test/main.go::func1(30)]| [1m[4m[31m[47mmap[content:hello world time:2022-10-14 12:32:00.174][0m
+::: Terminating... :::
+caught signal :  interrupt
+exit process - 2
