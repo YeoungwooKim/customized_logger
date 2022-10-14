@@ -1,44 +1,72 @@
 package colorPreset
 
-var Reset = "\x1b[0m"
-var BoldOn = "\x1b[1m"
-var BoldOff = "\x1b[21m"
-var UnderLineOn = "\x1b[4m"
-var UnderLineOff = "\x1b[24m"
+import (
+	"runtime"
+	"strings"
+)
 
-//  backgroundColor "\x1b[" + color_number + 10"m"
-var Black = "\x1b[30m"
-var Red = "\x1b[31m"
-var Green = "\x1b[32m"
-var Yellow = "\x1b[33m"
-var Blue = "\x1b[34m"
-var Magenta = "\x1b[35m"
-var Cyan = "\x1b[36m"
-var White = "\x1b[37m"
-var Default = "\x1b[39m"
-var LightGray = "\x1b[90m"
-var LightRed = "\x1b[91m"
-var LightGreen = "\x1b[92m"
-var LightYellow = "\x1b[93m"
-var LightBlue = "\x1b[94m"
-var LightMagenta = "\x1b[95m"
-var LightCyan = "\x1b[96m"
-var LightWhite = "\x1b[97m"
+//text options
+var (
+	Reset, BoldOn, BoldOff, UnderLineOn, UnderLineOff string
+)
 
-var BgBlack = "\x1b[40m"
-var BgRed = "\x1b[41m"
-var BgGreen = "\x1b[42m"
-var BgYellow = "\x1b[43m"
-var BgBlue = "\x1b[44m"
-var BgMagenta = "\x1b[45m"
-var BgCyan = "\x1b[46m"
-var BgWhite = "\x1b[47m"
-var BgDefault = "\x1b[49m"
-var BgLightGray = "\x1b[100m"
-var BgLightRed = "\x1b[101m"
-var BgLightGreen = "\x1b[102m"
-var BgLightYellow = "\x1b[103m"
-var BgLightBlue = "\x1b[104m"
-var BgLightMagenta = "\x1b[105m"
-var BgLightCyan = "\x1b[106m"
-var BgLightWhite = "\x1b[107m"
+// text colors
+var (
+	LightGray, LightRed, LightGreen, LightYellow, LightBlue, LightMagenta, LightCyan, LightWhite string
+	Black, Red, Green, Yellow, Blue, Magenta, Cyan, White                                        string
+	Default                                                                                      string
+)
+
+// background colors
+var (
+	BgLightGray, BgLightRed, BgLightGreen, BgLightYellow, BgLightBlue, BgLightMagenta, BgLightCyan, BgLightWhite string
+	BgBlack, BgRed, BgGreen, BgYellow, BgBlue, BgMagenta, BgCyan, BgWhite                                        string
+	BgDefault                                                                                                    string
+)
+
+func init() {
+	osName := runtime.GOOS
+	if !strings.Contains(strings.ToLower(osName), "window") {
+		Reset = "\x1b[0m"
+		BoldOn = "\x1b[1m"
+		BoldOff = "\x1b[21m"
+		UnderLineOn = "\x1b[4m"
+		UnderLineOff = "\x1b[24m"
+
+		Black = "\x1b[30m"
+		Red = "\x1b[31m"
+		Green = "\x1b[32m"
+		Yellow = "\x1b[33m"
+		Blue = "\x1b[34m"
+		Magenta = "\x1b[35m"
+		Cyan = "\x1b[36m"
+		White = "\x1b[37m"
+		Default = "\x1b[39m"
+		LightGray = "\x1b[90m"
+		LightRed = "\x1b[91m"
+		LightGreen = "\x1b[92m"
+		LightYellow = "\x1b[93m"
+		LightBlue = "\x1b[94m"
+		LightMagenta = "\x1b[95m"
+		LightCyan = "\x1b[96m"
+		LightWhite = "\x1b[97m"
+
+		BgBlack = "\x1b[40m"
+		BgRed = "\x1b[41m"
+		BgGreen = "\x1b[42m"
+		BgYellow = "\x1b[43m"
+		BgBlue = "\x1b[44m"
+		BgMagenta = "\x1b[45m"
+		BgCyan = "\x1b[46m"
+		BgWhite = "\x1b[47m"
+		BgDefault = "\x1b[49m"
+		BgLightGray = "\x1b[100m"
+		BgLightRed = "\x1b[101m"
+		BgLightGreen = "\x1b[102m"
+		BgLightYellow = "\x1b[103m"
+		BgLightBlue = "\x1b[104m"
+		BgLightMagenta = "\x1b[105m"
+		BgLightCyan = "\x1b[106m"
+		BgLightWhite = "\x1b[107m"
+	}
+}

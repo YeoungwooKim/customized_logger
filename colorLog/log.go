@@ -33,6 +33,7 @@ var levels = [...]string{
 }
 
 var logger = newLogger(TRACE, true, true, true)
+var SENDER, RECEIVER = "this_is_sender_email_address", "this_is_receiver_email_address"
 
 type Logger struct {
 	LogLevel int
@@ -53,13 +54,12 @@ func SetLogLevel(level int) {
 // Options to save conditions according to level, save log to local, send logfile to remote
 func newLogger(level int, saveLog bool, postLog bool, mailingService bool) *Logger {
 	catchShutdown(
-		func(mailingService bool) func() {
-			if mailingService {
+		func(isEnableMailingService bool) func() {
+			if isEnableMailingService {
 				return postingLogData
 			} else {
-				return func() {
-					fmt.Printf("no mailing service \n")
-				}
+				fmt.Printf("no mailing service \n")
+				return nil
 			}
 		}(mailingService),
 	)
@@ -67,18 +67,6 @@ func newLogger(level int, saveLog bool, postLog bool, mailingService bool) *Logg
 		LogLevel: level,
 		SaveLog:  saveLog,
 		PostLog:  postLog,
-	}
-}
-
-func GetLogger() *Logger {
-	return logger
-}
-
-func SetLogger() {
-	logger = &Logger{
-		LogLevel: INFO,
-		SaveLog:  false,
-		PostLog:  false,
 	}
 }
 
@@ -112,7 +100,7 @@ func catchShutdown(gracefulShutdownFunc ...func()) {
 
 func postingLogData() {
 	log.Println("exit process - in mail service")
-	var bodyMsg, subject, sender, receiver string
+	var bodyMsg, subject string
 	attachment, _ := os.Getwd()
 	attachment += "/output.log"
 	if _, err := os.Stat(attachment); os.IsNotExist(err) {
@@ -121,10 +109,9 @@ func postingLogData() {
 	}
 	subject = "[System App Crashed] please check out attached log file."
 	bodyMsg = "<div> [" + time.Now().Format("2006-01-02 15:04:05.000") + "]</div> <strong>check attached file..</strong>"
-	sender, receiver = "this_is_sender_email_address", "this_is_receiver_email_address"
 
 	email.InitMsg(subject, bodyMsg, attachment)
-	email.SendMail(sender, receiver, email.EMAIL_TOKEN)
+	email.SendMail(SENDER, RECEIVER)
 }
 
 // returns specific location info that log declared.
@@ -161,9 +148,9 @@ func (logger *Logger) print(logLevel int, message string, a ...interface{}) {
 		file, multiWriter := initFileIo("output.log")
 		defer file.Close()
 		log.SetOutput(multiWriter)
-
-		log.SetFlags(0)
 		log.SetPrefix(fmt.Sprintf("[%v][%v][%v]| ", getDate(), logType, caller))
+		log.SetFlags(0)
+
 		log.Println(message)
 	}
 }

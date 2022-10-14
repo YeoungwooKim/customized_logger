@@ -7,11 +7,10 @@ import (
 	"time"
 )
 
-func init() {
+func main() {
 	// TRACE, DEBUG, INFO, WARN, ERROR, FATAL.
 	colorLog.SetLogLevel(colorLog.INFO)
-}
-func main() {
+
 	http.Handle("/healthz", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		data := map[string]interface{}{
 			"time":    string(time.Now().Format("2006-01-02 15:04:05.000")),
